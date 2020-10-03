@@ -37,7 +37,6 @@ public class CountryEndpoint {
 	public GetPredictiveSearchResponse getProperties(@RequestPayload GetPredictiveSearch request) {
 		GetPredictiveSearchResponse response = new GetPredictiveSearchResponse();
 		//response.setCountry(countryRepository.findCountry(request.getName()));
-
 		return response;
 	}
 }

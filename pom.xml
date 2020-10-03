@@ -45,7 +45,37 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- WS Security dependencies -->
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-security</artifactId>
+			<version>3.0.8.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>javax.activation-api</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.wss</groupId>
+			<artifactId>xws-security</artifactId>
+			<version>3.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.xml.crypto</groupId>
+					<artifactId>xmldsig</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>adobe-public</id>
+			<url>https://repo.adobe.com/nexus/content/repositories/public/</url>
+		</repository>
+	</repositories>
 
 	<profiles>
 		<profile>

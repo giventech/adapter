@@ -29,11 +29,24 @@
     <xs:element name="getPredictiveSearchResponse">
         <xs:complexType>
                 <xs:sequence>
-                    <xs:element name="Suggestion" type="tns:country"/>
+                    <xs:element name="PredictiveSearchResponse" type="tns:country"/>
                 </xs:sequence>
         </xs:complexType>
 
     </xs:element>
+
+    <xs:complexType name="predictiveSearchResponse">
+        <xs:sequence>
+            <xs:element name="suggestions" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="suggestionType"/>
+                        <xs:element type="xs:string" name="suggestionText"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="country">
         <xs:sequence>

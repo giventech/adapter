@@ -4,7 +4,13 @@
                   xmlns:cbm="http://spring.io/guides/gs-producing-web-service"
                   xmlns:oas="http://spring.io/guides/gs-producing-web-service"
 >
-   <soapenv:Header/>
+   <wsse:Security soapenv:mustUnderstand="111" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsse:UsernameToken wsu:Id="UsernameToken-459">
+         <wsse:Username>admin</wsse:Username>
+         <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">pwd123</wsse:Password>
+      </wsse:UsernameToken>
+   </wsse:Security>
    <soapenv:Body>
       <gs:getCountryRequest>
          <gs:name>Spain</gs:name>

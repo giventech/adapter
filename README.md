@@ -27,3 +27,22 @@ Unlike
 (https://tutorialflix.com/How-to-implement-security-in-SOAP-webservice-using-Spring-WS/)
 - Certificated bases authentication 
 (https://zoltanaltfatter.com/2016/04/30/soap-over-https-with-client-certificate-authentication/)
+
+
+## Resolutions to issues:
+
+Dependencies to JAF 1.0.2 must be resolved manually as it is not availaible from maven central repository
+This dependency must be added to artifactory.
+
+Library is available from maven repository below
+
+ <repositories>
+        <repository>
+            <id>adobe-public</id>
+            <url>https://repo.adobe.com/nexus/content/repositories/public/</url>
+        </repository>
+ </repositories>
+ 
+ OR
+ 
+ https://www.oracle.com/java/technologies/java-archive-downloads-java-plat-downloads.html#license-lightbox
